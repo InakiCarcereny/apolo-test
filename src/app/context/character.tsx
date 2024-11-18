@@ -32,13 +32,13 @@ export function useCharacter() {
 
 export function CharacterProvider({ children }: { children: ReactNode }) {
   const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<unknown | null | Error>(null);
 
   useEffect(() => {
     async function getCharacters() {
-      setLoading(true);
       try {
+        setLoading(true);
         const res = await charactersAdapter();
         setCharacters(res);
       } catch (err) {
@@ -49,10 +49,6 @@ export function CharacterProvider({ children }: { children: ReactNode }) {
     }
     getCharacters();
   }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <CharacterContext.Provider

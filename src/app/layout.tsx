@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} ${poppins.className} antialiased`}>
+      <body
+        className={`${poppins.className} ${poppins.className} antialiased bg-zinc-100`}
+      >
         <CharacterProvider>{children}</CharacterProvider>
       </body>
     </html>

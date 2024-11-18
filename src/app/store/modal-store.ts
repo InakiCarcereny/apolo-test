@@ -7,7 +7,7 @@ interface ModalStore {
   closeModal: () => void;
 }
 
-type ModalType = "favorites";
+type ModalType = "favorites" | "create-character";
 
 export const useModalStore = create<ModalStore>((set) => ({
   type: null,
