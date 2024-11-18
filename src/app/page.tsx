@@ -1,3 +1,3 @@
 export default function Home() {
-  return <div>hoal</div>;
+  return <div>landing page</div>;
 }
