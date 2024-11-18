@@ -2,11 +2,14 @@
 
 import { useCharacter } from "@/app/context/character";
 import { Character } from "../character/Character";
+import { Loading } from "../loading";
 
 export function CharacterList() {
-  const { characters } = useCharacter();
+  const { characters, loading } = useCharacter();
 
-  console.log(characters);
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <ul className="grid grid-cols-4 gap-6">
