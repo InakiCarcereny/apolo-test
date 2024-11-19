@@ -5,8 +5,6 @@ export async function charactersAdapter() {
   try {
     const res = await getCharactersRequest();
 
-    console.log(res);
-
     const characters = res.data.results;
 
     return characters.map((character: Character) => ({
