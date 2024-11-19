@@ -13,14 +13,14 @@ export interface Character {
   name: string;
   status: string;
   species: string;
-  type: string;
-  gender: string;
+  type?: string;
+  gender?: string;
   origin: Origin;
-  location: Location;
+  location?: Location;
   image: string;
-  episode: string[];
-  url: string;
-  created: string;
+  episode?: string[];
+  url?: string;
+  created?: string;
 }
 
 export type CharacterProps = Pick<
