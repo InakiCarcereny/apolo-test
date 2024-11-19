@@ -8,8 +8,12 @@ import { FormProps } from "@/app/models";
 
 import { useLocalStorage } from "@/app/hooks";
 
+import { useRouter } from "next/navigation";
+
 export function RegisterForm() {
   const { setValue } = useLocalStorage("user", {});
+
+  const router = useRouter();
 
   const {
     register,
@@ -19,6 +23,7 @@ export function RegisterForm() {
 
   const onSubmit = handleSubmit((data) => {
     setValue(data);
+    router.push("/login");
   });
 
   return (
@@ -50,7 +55,7 @@ export function RegisterForm() {
         regex={/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/}
       />
 
-      <SubmitButton />
+      <SubmitButton label="Register" />
 
       <Redirect value="login" />
     </form>

@@ -54,7 +54,7 @@ export function LoginForm() {
 
       {error && <p className="text-red-500 text-sm">{error}</p>}
 
-      <SubmitButton />
+      <SubmitButton label="Log in" />
 
       <Redirect value="register" />
     </form>

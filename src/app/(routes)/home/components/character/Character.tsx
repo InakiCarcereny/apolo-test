@@ -3,6 +3,7 @@ import { Dot, Earth, Galaxy, Heart, HeartFill } from "@/app/icons";
 import { useFavoritesStore } from "@/app/store/favorites-store";
 
 import { CharacterProps } from "@/app/models";
+import Link from "next/link";
 
 export function Character({
   id,
@@ -19,7 +20,7 @@ export function Character({
   );
 
   return (
-    <li className="bg-white w-[250px] min-h-[300px] rounded-[4px] shadow-lg flex flex-col gap-3 px-2 py-2">
+    <li className="bg-white w-[250px] min-h-[425px] rounded-[4px] shadow-lg flex flex-col gap-3 px-2 py-2">
       <header className="flex items-center justify-between w-full">
         <h3 className="font-semibold text-zinc-600 truncate">{name}</h3>
         {isCharacterOnFavorites ? (
@@ -42,11 +43,11 @@ export function Character({
       </header>
 
       <section className="flex flex-col justify-between h-full gap-4">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 h-full">
           <img
             src={image}
             alt="character image"
-            className="w-full h-full rounded-[6px]"
+            className="w-full h-[250px] rounded-[6px]"
           />
 
           <span className="text-sm text-zinc-600 font-medium flex items-center gap-2">
@@ -78,9 +79,11 @@ export function Character({
           </span>
         </div>
 
-        <button className="w-full bg-orange-400 text-white px-4 py-2 rounded-[4px] font-semibold text-sm flex items-center justify-center">
-          Edit
-        </button>
+        <Link href={`/home/${id}`}>
+          <button className="w-full bg-orange-400 text-white px-4 py-2 rounded-[4px] font-semibold text-sm flex items-center justify-center">
+            Edit
+          </button>
+        </Link>
       </section>
     </li>
   );
