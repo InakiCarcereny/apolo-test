@@ -28,7 +28,7 @@ export function Input<T extends FieldValues>({
       <input
         type={type}
         id={id}
-        className="w-full border border-gray-600 px-2 py-2 rounded-[4px] focus:outline-none text-gray-600"
+        className="w-full border border-zinc-200 px-2 py-2 rounded-[4px] focus:outline-none text-gray-600"
         {...register(id, {
           required: `* ${label} is required`,
           ...(regex && {
