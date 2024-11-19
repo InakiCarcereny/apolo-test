@@ -49,11 +49,11 @@ export function Header() {
 
   return (
     <>
-      <header className="w-full h-[200px] md:h-[150px] bg-gradient-to-t from-zinc-100 to-white px-4 md:px-10 py-2 md:py-7 flex flex-col gap-4 md:gap-0 md:flex-row items-center md:justify-between justify-center border-b border-gray-200 shadow-lg">
-        <h1 className="flex flex-col items-center md:items-start gap-2 text-gray-600 text-sm md:text-2xl font-semibold">
+      <header className="w-full h-[200px] md:h-[150px] bg-gradient-to-t from-zinc-100 to-white px-4 xl:px-10 py-2 xl:py-7 flex flex-col gap-4 xl:gap-4 md:flex-row items-center md:justify-between justify-center border-b border-gray-200 shadow-lg">
+        <h1 className="flex flex-col sm:flex-row md:flex-col items-center md:items-start gap-2 text-gray-600 text-sm md:text-lg lg:text-2xl font-semibold">
           Welcome back to our
           <span
-            className="md:pl-20 text-4xl md:text-6xl text-cyan-500"
+            className="md:pl-16 lg:pd-20 text-4xl md:text-3xl lg:text-6xl text-cyan-500"
             style={{ WebkitTextStroke: "1px #22c55e" }}
           >
             Universe
@@ -81,7 +81,7 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          <p className="text-gray-600 font-semibold text-xs md:text-sm">
+          <p className="text-gray-600 font-semibold text-xs md:text-xs lg:text-sm">
             We are so happy to see you again{" "}
             <span className="text-orange-400" suppressHydrationWarning>
               {user}

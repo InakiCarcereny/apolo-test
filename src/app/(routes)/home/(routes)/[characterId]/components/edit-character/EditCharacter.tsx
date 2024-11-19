@@ -56,8 +56,8 @@ export function EditCharacter({ characterId }: { characterId: string }) {
 
   return (
     <div className="w-full h-screen flex items-center justify-center bg-zinc-100">
-      <div className="flex gap-8 h-full py-10">
-        <div className="bg-white w-[500px] h-full rounded-[4px] shadow-lg px-4 py-4 flex flex-col gap-4">
+      <div className="flex flex-col md:flex-row gap-10 h-full py-4 md:py-10">
+        <div className="bg-white max-w-[500px] min-h-full rounded-[4px] shadow-lg px-4 py-4 flex flex-col gap-4">
           <header className="w-full">
             <h1 className="text-lg text-zinc-600 font-semibold">
               Edit Character
@@ -187,7 +187,7 @@ export function EditCharacter({ characterId }: { characterId: string }) {
 
           <button
             type="button"
-            className="w-full bg-orange-400 text-white px-4 py-2 rounded-[4px] font-semibold text-sm flex items-center justify-center"
+            className="w-full bg-orange-400 text-white px-4 py-2 rounded-[4px] font-semibold text-sm flex items-center justify-center mt-4 md:mt-0"
           >
             Character preview
           </button>
