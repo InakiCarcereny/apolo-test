@@ -5,4 +5,3 @@ export * from "./character";
 export * from "./favorites";
 export * from "./loading";
 export * from "./create-character-modal";
-export * from "./edit-character-modal";

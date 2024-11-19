@@ -1,7 +1,7 @@
 "use client";
 
 import { Input, SubmitButton } from "@/app/components";
-import { Cross, UploadImage } from "@/app/icons";
+import { UploadImage } from "@/app/icons";
 import { useModalStore } from "@/app/store/modal-store";
 
 import { useForm } from "react-hook-form";
@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { Character } from "@/app/models";
 import { useCharacter } from "@/app/context/character";
 import { useCreateObjectURL } from "@/app/hooks";
+import { CreateCharacterModalHeader } from "../create-character-modal-header";
 
 export function CreateCharacterModal() {
   const { closeModal } = useModalStore();
@@ -43,18 +44,7 @@ export function CreateCharacterModal() {
         onSubmit={onSubmit}
         className="bg-white w-[500px] min-h-[450px] rounded-[4px] mx-4 md:mx-0 px-4 py-4 flex flex-col gap-4"
       >
-        <header className="flex items-center justify-between w-full">
-          <h1 className="text-lg text-zinc-600 font-semibold">
-            Create Character
-          </h1>
-          <button
-            type="button"
-            onClick={closeModal}
-            className="text-gray-500 hover:text-orange-400 duration-200"
-          >
-            <Cross className="w-7 h-7" />
-          </button>
-        </header>
+        <CreateCharacterModalHeader />
 
         <Input
           label="Name"
