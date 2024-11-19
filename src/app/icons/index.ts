@@ -7,3 +7,5 @@ export * from "./Cross";
 export * from "./Trash";
 export * from "./Plus";
 export * from "./Search";
+export * from "./Pen";
+export * from "./UploadImage";
